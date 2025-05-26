@@ -322,6 +322,16 @@ input, select, textarea {
 		border-bottom-color: #eeeeee;
 	}
 
+	#main blockquote {
+		border-left-color: #00ffff; /* Cyan */
+	}
+
+	#main code {
+		background: rgba(0, 0, 0, 0.2);
+		border-color: #555555;
+		color: #f0f0f0;
+	}
+
 /* Row */
 
 	.row {
@@ -2070,10 +2080,10 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		border: 0;
 		border-radius: 0;
 		cursor: pointer;
@@ -2215,8 +2225,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 2px #18bfef;
-			color: #18bfef !important;
+			box-shadow: 0 0 8px #00ffff, 0 0 4px #00b8b8;
+			color: #00ffff !important;
 		}
 
 		input[type="submit"].primary,
@@ -2235,6 +2245,7 @@ input, select, textarea {
 			button.primary:hover,
 			.button.primary:hover {
 				background-color: #18bfef;
+				transform: scale(1.05);
 			}
 
 /* Form */
@@ -2824,13 +2835,14 @@ input, select, textarea {
 				text-align: center;
 				border-radius: 100%;
 				font-size: 1.25rem;
+				transition: transform 0.2s ease-in-out;
 			}
 
 		ul.icons.alt li .icon:before {
-			-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-			-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-			-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-			transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+			-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 			font-size: 1rem;
 		}
 
@@ -2891,6 +2903,7 @@ input, select, textarea {
 
 	ul.icons li a.icon:hover:before {
 		color: #18bfef;
+		transform: scale(1.1);
 	}
 
 	ul.icons.alt li .icon:before {
@@ -2899,6 +2912,7 @@ input, select, textarea {
 
 	ul.icons.alt li a.icon:hover:before {
 		box-shadow: inset 0 0 0 2px #18bfef;
+		transform: scale(1.1);
 	}
 
 /* Section/Article */
@@ -2913,6 +2927,7 @@ input, select, textarea {
 
 		header > .date {
 			display: block;
+			font-family: 'Courier New', monospace;
 			font-size: 0.8rem;
 			height: 1;
 			margin: 0 0 1rem 0;
@@ -2959,6 +2974,7 @@ input, select, textarea {
 			}
 
 			header.major > .date {
+				font-family: 'Courier New', monospace;
 				font-size: 1rem;
 				margin: 0 0 4rem 0;
 			}
@@ -3079,24 +3095,48 @@ input, select, textarea {
 		border-color: #eeeeee;
 	}
 
+	#main table tbody tr {
+		border-color: #444444;
+	}
+
 		table tbody tr:nth-child(2n + 1) {
 			background-color: rgba(220, 220, 220, 0.25);
 		}
 
+	#main table tbody tr:nth-child(2n + 1) {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
 	table th {
 		color: #212931;
+	}
+
+	#main table th {
+		color: #ffffff;
 	}
 
 	table thead {
 		border-bottom-color: #eeeeee;
 	}
 
+	#main table thead {
+		border-bottom-color: #444444;
+	}
+
 	table tfoot {
 		border-top-color: #eeeeee;
 	}
 
+	#main table tfoot {
+		border-top-color: #444444;
+	}
+
 	table.alt tbody tr td {
 		border-color: #eeeeee;
+	}
+
+	#main table.alt tbody tr td {
+		border-color: #444444;
 	}
 
 /* Pagination */
@@ -3356,6 +3396,7 @@ input, select, textarea {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #ffffff;
 			color: #ffffff !important;
+			transition: all 0.3s ease-in-out;
 		}
 
 			#intro input[type="submit"]:hover,
@@ -3375,6 +3416,7 @@ input, select, textarea {
 				background-color: #ffffff;
 				box-shadow: none;
 				color: #1e252d !important;
+				transition: all 0.3s ease-in-out;
 			}
 
 				#intro input[type="submit"].primary:hover,
@@ -3383,6 +3425,7 @@ input, select, textarea {
 				#intro button.primary:hover,
 				#intro .button.primary:hover {
 					background-color: #18bfef;
+					transform: scale(1.05);
 				}
 
 		#intro h1 {
@@ -3717,7 +3760,7 @@ input, select, textarea {
 				}
 
 					#nav ul.links li a:hover {
-						color: inherit !important;
+						color: #00ffff !important;
 						background-color: rgba(255, 255, 255, 0.1);
 					}
 
@@ -3756,7 +3799,8 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #2a2f36;
+		color: #e0e0e0;
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
@@ -3783,6 +3827,7 @@ input, select, textarea {
 		}
 
 			#main > .post header.major > .date {
+				font-family: 'Courier New', monospace;
 				margin-top: -2rem;
 			}
 
@@ -3977,6 +4022,21 @@ input, select, textarea {
 				color: #18bfef !important;
 			}
 
+	#main a {
+		color: #00ffff;
+		border-bottom-color: rgba(0, 255, 255, 0.5);
+	}
+
+		#main a:hover {
+			color: #00cccc !important;
+			border-bottom-color: transparent;
+		}
+
+	#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 {
+		color: #ffffff;
+		font-family: 'Courier New', monospace;
+	}
+
 		#footer strong, #footer b {
 			color: #717981;
 		}
@@ -4010,6 +4070,7 @@ input, select, textarea {
 			background-color: transparent;
 			box-shadow: inset 0 0 0 2px #717981;
 			color: #717981 !important;
+			transition: all 0.3s ease-in-out;
 		}
 
 			#footer input[type="submit"]:hover,
@@ -4029,6 +4090,7 @@ input, select, textarea {
 				background-color: #717981;
 				box-shadow: none;
 				color: #f5f5f5 !important;
+				transition: all 0.3s ease-in-out;
 			}
 
 				#footer input[type="submit"].primary:hover,
@@ -4037,6 +4099,7 @@ input, select, textarea {
 				#footer button.primary:hover,
 				#footer .button.primary:hover {
 					background-color: #18bfef;
+					transform: scale(1.05);
 				}
 
 		#footer label {
